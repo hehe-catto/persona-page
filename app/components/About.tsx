@@ -20,7 +20,7 @@ export function About() {
           <li
             key={skill}
             style={{ animationDelay: `${Math.min(i * 45, 600)}ms` }}
-            className="motion-safe:pop-in text-body text-gray-700 bg-gray-100 px-3 py-1 rounded-full transition-colors hover:bg-primary-100 hover:text-primary-800"
+            className="sm:motion-safe:pop-in text-body text-gray-700 bg-gray-100 px-3 py-1 rounded-full transition-colors hover:bg-primary-100 hover:text-primary-800"
           >
             {skill}
           </li>
