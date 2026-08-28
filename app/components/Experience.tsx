@@ -14,7 +14,7 @@ export function Experience() {
           <div
             key={`${job.company}-${job.period}`}
             style={{ animationDelay: `${120 + i * 110}ms` }}
-            className="motion-safe:rise-in max-w-xl"
+            className="sm:motion-safe:rise-in max-w-xl"
           >
             <div className="flex items-baseline justify-between gap-4">
               <h3 className="text-subheading font-bold text-gray-900">
