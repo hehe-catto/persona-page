@@ -19,6 +19,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={nunito.variable}>
       <body className="font-sans bg-gray-50 text-gray-900 antialiased">
+        <noscript>
+          <style>{`.reveal,.reveal--pop>*{opacity:1!important;transform:none!important;filter:none!important}`}</style>
+        </noscript>
         {children}
       </body>
     </html>
