@@ -1,4 +1,5 @@
 import { experience } from "@/app/data";
+import { Reveal } from "@/app/components/Reveal";
 
 export function Experience() {
   return (
@@ -9,13 +10,9 @@ export function Experience() {
       >
         Experience
       </h2>
-      <div className="flex flex-col gap-10">
-        {experience.map((job, i) => (
-          <div
-            key={`${job.company}-${job.period}`}
-            style={{ animationDelay: `${120 + i * 110}ms` }}
-            className="sm:motion-safe:rise-in max-w-xl"
-          >
+      <Reveal pop className="flex flex-col gap-10">
+        {experience.map((job) => (
+          <div key={`${job.company}-${job.period}`} className="max-w-xl">
             <div className="flex items-baseline justify-between gap-4">
               <h3 className="text-subheading font-bold text-gray-900">
                 {job.role}
@@ -52,7 +49,7 @@ export function Experience() {
             </ul>
           </div>
         ))}
-      </div>
+      </Reveal>
     </section>
   );
 }

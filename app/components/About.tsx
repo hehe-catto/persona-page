@@ -1,4 +1,5 @@
 import { skills } from "@/app/data";
+import { Reveal } from "@/app/components/Reveal";
 
 export function About() {
   return (
@@ -15,17 +16,16 @@ export function About() {
         Computer Science Engineering at Pontificia Universidad Católica de Chile,
         where I also teach UX/UI and Software Development.
       </p>
-      <ul className="flex flex-wrap gap-2 mt-6 max-w-xl">
-        {skills.map((skill, i) => (
+      <Reveal as="ul" pop className="flex flex-wrap gap-2 mt-6 max-w-xl">
+        {skills.map((skill) => (
           <li
             key={skill}
-            style={{ animationDelay: `${Math.min(i * 45, 600)}ms` }}
-            className="sm:motion-safe:pop-in text-body text-gray-700 bg-gray-100 px-3 py-1 rounded-full transition-colors hover:bg-primary-100 hover:text-primary-800"
+            className="text-body text-gray-700 bg-gray-100 px-3 py-1 rounded-full transition-colors hover:bg-primary-100 hover:text-primary-800"
           >
             {skill}
           </li>
         ))}
-      </ul>
+      </Reveal>
     </section>
   );
 }
