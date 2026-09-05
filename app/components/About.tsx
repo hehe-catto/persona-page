@@ -18,7 +18,11 @@ export function About() {
         Computer Science Engineering at Pontificia Universidad Católica de Chile,
         where I also teach UX/UI and Software Development.
       </Reveal>
-      <Reveal as="ul" pop className="flex flex-wrap gap-2 mt-6 max-w-xl">
+      <Reveal
+        as="ul"
+        pop
+        className="reveal--pop-tight flex flex-wrap gap-2 mt-6 max-w-xl"
+      >
         {skills.map((skill) => (
           <li
             key={skill}

@@ -156,6 +156,11 @@
 .reveal--pop > *:nth-child(13) { transition-delay: calc(12 * var(--pop-step)); }
 .reveal--pop > *:nth-child(n + 14) { transition-delay: calc(13 * var(--pop-step)); }
 
+.reveal--pop-tight {
+  --pop-dur: 0.5s;
+  --pop-step: 45ms;
+}
+
 @media (max-width: 640px) {
   .reveal {
     --reveal-dur: 1.3s;
@@ -168,6 +173,11 @@
     --pop-step: 140ms;
     --pop-shift: 20px;
     --pop-blur: 9px;
+  }
+
+  .reveal--pop-tight {
+    --pop-dur: 0.6s;
+    --pop-step: 60ms;
   }
 }
 
