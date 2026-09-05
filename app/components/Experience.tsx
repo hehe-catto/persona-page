@@ -4,12 +4,14 @@ import { Reveal } from "@/app/components/Reveal";
 export function Experience() {
   return (
     <section aria-labelledby="experience-label" className="py-16 border-t border-gray-200">
-      <h2
-        id="experience-label"
-        className="text-body font-bold text-gray-600 uppercase tracking-wider mb-8"
-      >
-        Experience
-      </h2>
+      <Reveal>
+        <h2
+          id="experience-label"
+          className="text-body font-bold text-gray-600 uppercase tracking-wider mb-8"
+        >
+          Experience
+        </h2>
+      </Reveal>
       <Reveal pop className="flex flex-col gap-10">
         {experience.map((job) => (
           <div key={`${job.company}-${job.period}`} className="max-w-xl">
